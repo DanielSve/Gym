@@ -91,19 +91,19 @@ class CustomerTest {
     @Test
     void printToFile() {
         Customer customer1 = new Customer();
-        customer1.setPersNr("841026-5550");
+        customer1.setPersNr("8410265550");
         customer1.setName("Daniel Svensson");
         customer1.setHasFile(false);
-        assertTrue(customer1.printToFile(customer1).equals("Daniel Svensson 841026-5550\nLista över träningstillfällen\n"
+        assertTrue(customer1.printToFile(customer1).equals("Daniel Svensson 8410265550\nLista över träningstillfällen\n"
                 +java.time.LocalDate.now() + "\n"));
 
         customer1.setHasFile(true);
         assertTrue(customer1.printToFile(customer1).equals("" + java.time.LocalDate.now() + "\n"));
 
         Customer customer2 = new Customer();
-        customer2.setPersNr("851203-5555");
+        customer2.setPersNr("8512035555");
         customer2.setName("Stina Andersson");
-        assertTrue(customer2.printToFile(customer2).equals("Stina Andersson 851203-5555\nLista över träningstillfällen\n"
+        assertTrue(customer2.printToFile(customer2).equals("Stina Andersson 8512035555\nLista över träningstillfällen\n"
                 +java.time.LocalDate.now() +"\n"));
 
         customer2.setHasFile(true);

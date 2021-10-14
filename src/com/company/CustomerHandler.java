@@ -29,7 +29,7 @@ public class CustomerHandler {
         } catch (FileNotFoundException e) {
             System.out.println("File not found");
             e.printStackTrace();
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return list;
@@ -60,7 +60,6 @@ public class CustomerHandler {
     }
 
     public void userInput() {
-        try {
             String nameOrPersNr = "";
             while (running) {
                 isActiveMember = false;
@@ -75,8 +74,6 @@ public class CustomerHandler {
                     running = false;
                 }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
     }
 }
